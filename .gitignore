@@ -1,0 +1,8 @@
+data
+out
+Untitled.ipynb
+.virtual_documents/
+.ipynb_checkpoints/
+.DS_Store
+/models/*
+!/models/.gitkeep

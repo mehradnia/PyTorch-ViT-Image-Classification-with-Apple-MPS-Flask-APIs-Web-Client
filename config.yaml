@@ -1,0 +1,15 @@
+################################################ NOTEBOOK
+# GENERAL
+# data_directory: "path/to/your/data"
+data_directory: "../data/animals"
+pre_trained_model: "vit_base_patch32_224"
+batch_size: 32
+num_epochs: 50
+
+# EARLY STOPPING
+patience: 4
+learning_rate: 0.0001
+
+# APPLICATION
+PORT: 8000
+APP_MODEL: "trained_vit_base_patch32_224" # The model name to be used for prediction within the application
