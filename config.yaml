@@ -1,7 +1,6 @@
 ################################################ NOTEBOOK
 # GENERAL
-# data_directory: "path/to/your/data"
-data_directory: "../data/animals"
+data_directory: "path/to/your/data"
 pre_trained_model: "vit_base_patch32_224"
 batch_size: 32
 num_epochs: 50
