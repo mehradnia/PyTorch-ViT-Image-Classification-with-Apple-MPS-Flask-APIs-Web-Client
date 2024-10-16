@@ -77,3 +77,12 @@ This repository demonstrates an end-to-end pipeline for image classification usi
 Example POST request:
 ```bash
 curl -X POST -F "file=@path_to_image.jpg" http://localhost:8000/predict
+```
+
+## Key Topics of Training Model:
+
+1. ### Early Stopping: 
+This technique monitors the model's performance on the validation set during training. If the model's validation loss stops improving for a specified number of epochs (patience), training is halted to prevent overfitting and save time.
+
+2. ### Data Augmentation: 
+Random transformations are applied to the training data to increase the variety of the dataset. Techniques like random resizing, rotations, and color jittering are used to help the model generalize better by learning from a broader range of input variations.
