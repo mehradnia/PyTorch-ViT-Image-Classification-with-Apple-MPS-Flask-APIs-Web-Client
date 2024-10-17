@@ -3,7 +3,7 @@
 This repository demonstrates an end-to-end pipeline for image classification using a Vision Transformer (ViT) model built with PyTorch, optimized for Apple's MPS (Metal Performance Shaders) to leverage GPU acceleration on M1, M2, and M3 Macs. The project includes a Flask-based API for backend model inference, allowing users to interact with the model through a web client. It provides a seamless integration of deep learning, RESTful APIs, and web deployment for real-time image classification tasks.
 
 ## Table of Contents
-1. [Features](#features)
+1.   [Features](#features)
 2. [Prerequisites](#prerequisites)
 3. [Installation](#installation)
 4. [Running the Project](#running-the-project)
@@ -97,3 +97,6 @@ This technique monitors the model's performance on the validation set during tra
 
 2. ### Data Augmentation: 
 Random transformations are applied to the training data to increase the variety of the dataset. Techniques like random resizing, rotations, and color jittering are used to help the model generalize better by learning from a broader range of input variations.
+
+3. ### Reproducible Data Splitting
+It refers to the systematic partitioning of datasets into training, validation, and test subsets in a manner that guarantees consistency across multiple runs. This method helps make model evaluations reliable and allows others to replicate the experiments. Reproducible data splitting is important for keeping machine learning workflows fair and ensuring that different models can be compared accurately.
