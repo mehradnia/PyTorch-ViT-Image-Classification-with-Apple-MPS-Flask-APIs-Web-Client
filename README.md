@@ -2,6 +2,16 @@
 
 This repository demonstrates an end-to-end pipeline for image classification using a Vision Transformer (ViT) model built with PyTorch, optimized for Apple's MPS (Metal Performance Shaders) to leverage GPU acceleration on M1, M2, and M3 Macs. The project includes a Flask-based API for backend model inference, allowing users to interact with the model through a web client. It provides a seamless integration of deep learning, RESTful APIs, and web deployment for real-time image classification tasks.
 
+## Table of Contents
+1. [Features](#features)
+2. [Prerequisites](#prerequisites)
+3. [Installation](#installation)
+4. [Running the Project](#running-the-project)
+   - [Train the Model](#1-train-the-model)
+   - [Run the Flask Server](#2-run-the-flask-server)
+5. [Key Topics of Training Model](#key-topics-of-training-model)
+   - [Early Stopping](#early-stopping)
+   - [Data Augmentation](#data-augmentation)
 
 ## Features
 - PyTorch-based ViT image classification model, optimized with Apple MPS.
@@ -59,7 +69,7 @@ This repository demonstrates an end-to-end pipeline for image classification usi
 ### 1. Train the Model
 1. Open the `config.yaml` file and replace `path/to/your/data` with your data directory (eg: `data/animals`).
 
-2. Open the `notebooks/vit_image_classifier.ipynb` file and proceed thorugh the instructions within the notebook to train your model.
+2. Open the `notebooks/vit_image_classifier.ipynb` file and proceed through the instructions within the notebook to train your model.
 
 3. Once training is completed, you can find the trained model in the `/models` directory.
 
@@ -78,6 +88,7 @@ Example POST request:
 ```bash
 curl -X POST -F "file=@path_to_image.jpg" http://localhost:8000/predict
 ```
+
 
 ## Key Topics of Training Model:
 
