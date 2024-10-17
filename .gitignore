@@ -6,3 +6,4 @@ Untitled.ipynb
 .DS_Store
 /models/*
 !/models/.gitkeep
+config.dev.yaml
