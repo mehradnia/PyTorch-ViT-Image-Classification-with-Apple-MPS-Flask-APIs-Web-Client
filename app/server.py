@@ -6,8 +6,11 @@ from PIL import Image
 from timm import create_model
 from flask_cors import CORS  # Import CORS
 import yaml
+from pathlib import Path
 
-with open('../config.yaml', 'r') as config_file:
+config_path = Path(__file__).resolve().parent.parent / 'config.yaml'
+
+with open(config_path, 'r') as config_file:
     config = yaml.safe_load(config_file)
 
 # Define the Flask app
@@ -17,8 +20,10 @@ CORS(app)
 # Load the saved model
 # Change num_classes based on your dataset
 model = create_model(config['pre_trained_model'], num_classes=90)
-model.load_state_dict(torch.load(
-    f"../models/{config['APP_MODEL']}.pth", map_location=torch.device('cpu')))
+
+model_path = Path(__file__).resolve().parent.parent / \
+    'models' / (config['APP_MODEL'] + '.pth')
+model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
 model.eval()
 
 # Define the image transforms (same as training)

@@ -21,6 +21,7 @@ This repository demonstrates an end-to-end pipeline for image classification usi
 ## Prerequisites
 - **Apple Silicon Mac (M1, M2, or M3)** for MPS acceleration (or use CPU). Windows GPU (CUDA) support will be added soon.
 - Python 3.8 or higher.
+- If using a Conda environment, **Conda** needs to be installed.
 
 ## Installation
 1. **Clone the repository:**
@@ -29,11 +30,19 @@ This repository demonstrates an end-to-end pipeline for image classification usi
     cd PyTorch-ViT-Image-Classification-with-Apple-MPS-Flask-APIs-Web-Client
     ```
 
-2. **Create and activate a virtual environment:**
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows use venv\Scripts\activate
-    ```
+2. **Create and activate a virtual environment (Choose one of the methods below):**
+
+   - Using **venv**:
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate  # On Windows use venv\Scripts\activate
+     ```
+
+   - Using **Conda** (make sure Conda is installed):
+     ```bash
+     conda create --name myenv python=3.x
+     conda activate myenv
+     ```
 
 3. **Install dependencies:**
     ```bash
